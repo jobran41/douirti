@@ -1,0 +1,653 @@
+/*
+	Theme Name: Douiriti Theme
+	Theme URI: http://www.streamerz.com/
+	Author: streamerz
+	Author URI: http://www.streamerz.com/jobran
+	Description: This is an Douiriti theme
+	Version: 0.1 alpha
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Tags: black, white, responsive, one-column, two-columns, featured-images, custom-menu, custom-header, post-formats
+*/
+@font-face {
+    font-family: 'adelle_sanssemibold';
+    src: url('fonts/adellesans-semibold-webfont.eot');
+    src: url('fonts/adellesans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/adellesans-semibold-webfont.woff2') format('woff2'),
+         url('fonts/adellesans-semibold-webfont.woff') format('woff'),
+         url('fonts/adellesans-semibold-webfont.ttf') format('truetype'),
+         url('fonts/adellesans-semibold-webfont.svg#adelle_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'adelle_sanslight';
+    src: url('fonts/adellesans-light-webfont.eot');
+    src: url('fonts/adellesans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/adellesans-light-webfont.woff2') format('woff2'),
+         url('fonts/adellesans-light-webfont.woff') format('woff'),
+         url('fonts/adellesans-light-webfont.ttf') format('truetype'),
+         url('fonts/adellesans-light-webfont.svg#adelle_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'adelle_sansbold';
+    src: url('fonts/adellesansbasic-bold-webfont.eot');
+    src: url('fonts/adellesansbasic-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/adellesansbasic-bold-webfont.woff2') format('woff2'),
+         url('fonts/../font/adellesansbasic-bold-webfont.woff') format('woff'),
+         url('fonts/adellesansbasic-bold-webfont.ttf') format('truetype'),
+         url('fonts/../font/adellesansbasic-bold-webfont.svg#adelle_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'adelle_sansregular';
+    src: url('fonts/adellesansbasic-regular-webfont.eot');
+    src: url('fonts/adellesansbasic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/adellesansbasic-regular-webfont.woff2') format('woff2'),
+         url('fonts/adellesansbasic-regular-webfont.woff') format('woff'),
+         url('fonts/adellesansbasic-regular-webfont.ttf') format('truetype'),
+         url('fonts/adellesansbasic-regular-webfont.svg#adelle_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background:url('images/bg_site.png') repeat-x center center fixed;
+    min-height:900px;
+    /*overflow:hidden;*/
+}
+/******* Start Overriding Bootstrap ******/
+/* Main Navbar */
+.navbar {min-height:80px;background-color: #f7f7f7;}
+/* Navbar Link */
+.navbar .navbar-nav > li > a {
+    color:#707271;
+    padding-top:25px;
+    padding-bottom:25px;
+    font-size:15px;
+    font-family: 'adelle_sanssemibold';
+}
+.navbar .navbar-nav > li > a:hover {
+    color: #1a6aea;
+    background: #c2d2f4;
+    border-right: 1px solid #c2d2f4;
+}
+/*.navbar .navbar-nav > li > a.active {
+    color: #1a6aea;
+}*/
+/* Brand Name */
+
+.navbar .navbar-brand {
+    color:#BBB;
+    font-size:30px;
+    line-height:40px;
+}
+.navbar .navbar-brand img{
+    max-width: 70%;
+}
+.navbar-collapse ul li button{border: none;margin-top: 25px;}
+.navbar-collapse ul li a#searchform{cursor: pointer;}
+/* Carousel */
+#myslide{
+    background:url('images/bg_slider.png') no-repeat;/*repeat-x center center fixed*/
+    /*max-height: 599px;*/
+	background-size: cover;
+}
+.boxrelative{
+    position: relative;
+}
+.boxrelative .textslider{
+    position: absolute;
+    top: 41%;
+    left: 6%;
+}
+.boxrelative  img{margin-top: 135px;}
+.boxrelative .textslider h3{
+    font-family: 'adelle_sanssemibold';
+    font-size: 30px;
+    color: #2362d9;
+    text-transform: uppercase;
+}
+.boxrelative .textslider p {
+    font-family: 'adelle_sansregular';
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+.boxrelative a.sliderbtn{
+    background-color: #2462d9;
+    box-shadow: -1px 1px 9px;
+    color: #fff;
+    font-family: "adelle_sansregular";
+    font-size: 15px;
+    padding: 6px 32px;
+    text-decoration: none;
+}
+.carousel-inner {overflow: hidden;}
+/*indecator carousol */
+.carousel-indicators {
+    width: 3%;
+    margin-left: 0;
+    bottom: 3%;
+    left: 0;
+    right: 0;
+}
+.carousel-indicators .active {
+background: #2462d9;
+padding: 10px;
+}
+.carousel-indicators li {
+    border-radius: 0;
+    background: #707271;
+    padding: 10px;
+    border: 0px;
+}
+/******* end Overriding Bootstrap ******/
+/******* start formulair search ******/
+  .field {
+  display:none;
+  position: fixed;
+  width: 20%;
+  z-index: 50;
+  right: 90px;
+  top: 85px;
+}
+.widget input.form-control ,.field input.form-control{
+    border: 0 none;
+    border-radius: 0;
+    float: left;
+    margin-left: 0;
+    width: 77%;
+}
+.widget button[type=submit] ,.field button[type=submit]{
+    background-color: #b9ddf0;
+    border: medium none;
+    height: 34px;
+    margin-right: 0;
+}
+
+.field>input[type=text],
+.field>button {
+  display:block;
+  font:1.2em 'Montserrat Alternates';
+
+}
+
+.field>input[type=text] {
+  padding:0.6em;
+  border:0.2em solid #1a6aea;
+  float: left;
+}
+
+.field>button {
+  padding:13px ;
+  background-color:#1a6aea;
+  color:white;
+  border:none;
+}
+/******* end formulair search ******/
+/******* start Steal commun ******/
+.stylesearch{margin: 100px 50px;}
+.h1{
+    font-family: 'adelle_sansbold';
+    font-size: 35px;
+    color: #2362B8;/*#2362d9*/
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+h4{
+    font-family: 'adelle_sanssemibold';
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #333333;
+}
+section{
+    /*margin-bottom: 80px;
+    margin-top: 80px;*/
+}
+p.lead{
+    color: #373a36;
+    font-family: 'adelle_sanssemibold';
+    font-size: 16px;
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+}
+p.lead2{
+    font-family: 'adelle_sanssemibold';
+    font-size: 16px;
+    color: #888888;
+	text-align: center;
+}
+a.voirplus{
+    display: block;
+    text-align: center;
+}
+a.voirplusborder{
+    border: 1px solid #1a6aeb;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    width: 13%;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: "adelle_sansregular";
+    margin-top: 80px;
+}
+.team-projet a , .team-ventes a{
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.team-projet a .captn, .team-ventes a .captn,.team-projet a .captun,.team-projet a .captns {
+    background-color: rgba(51, 51, 51, 0.68);
+    display: inline-block;
+    bottom: -100%;
+    height: 100%;
+    padding: 5% 10%;
+    position: absolute;
+    right: 41px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    width: 77%;
+
+}
+.team-projet a .captun {
+    bottom: -100%;
+    right: 0px;
+    width: 100%;
+
+}
+.team-projet a:hover .captun {
+    bottom: 0;
+    padding: 43% 10%;
+    width: 100%;
+}
+.team-projet a:hover .captun i{
+    margin-top: 80px;
+    font-size: 30px;
+    color: #fff;
+}
+.clear{
+    clear: both;
+}
+/******* end Steal commun  ******/
+
+/******* start section qui somme nous ******/
+section#quisommenous{
+    margin-top: 50px;/*150px*/
+    /*background:url('../images/sommenous.png') no-repeat center center fixed;
+    min-height:600px;
+   */
+}
+section#quisommenous .info {
+    /*background:rgba(2,2,2,0.8);color:#FFF;min-height:600px*/
+    /*background: rgba(0, 0, 0, 0.69) none repeat scroll 0 0;*/
+    margin-top: 2em;
+    padding: 3em 2em;
+}
+section#quisommenous .info p{color: #373a36;
+    line-height: 170%;
+    font-family: adelle_sanssemibold;
+    font-size: 16px;}
+section#quisommenous .info li{color: #373a36;
+    line-height: 170%;
+    font-family: adelle_sanssemibold;
+    font-size: 16px;}
+/*section#quisommenous .margbot{margin-bottom: 20px;}*/
+/******* end  section qui somme nous ******/
+
+/******* start section projet ******/
+.team-projet a .captn {
+    bottom: -100%;
+    right: 39px;/*43*/
+    width: 78%;/*76*/
+
+}
+.team-projet a:hover .captn {
+    bottom: 0;
+    padding: 43% 10%;
+    width: 78%;/*76*/
+}
+.team-projet a:hover .captn i{
+    margin-top: 80px;
+    font-size: 30px;
+    color: #fff;
+}
+span.flechblock{
+font-family: 'adelle_sanslight';
+font-size: 36px;
+color: #fff;
+}
+span.flechblock:after{
+    background: rgba(0, 0, 0, 0) url("images/flechtransparent.png") no-repeat scroll right center;
+    content: "";
+    display: block;
+    height: 35px;
+    margin-right: -10px;
+    margin-top: -40px;
+}
+/******* end  section projet ******/
+/******* star  section ventes ******/
+/*****/
+.team-projet a .captns {
+    bottom: -100%;
+    right: 0px;/*43*/
+    width: 78%;/*76*/
+
+}
+.team-projet a:hover .captns {
+    bottom: 0;
+    padding: 43% 10%;
+    width: 100%;/*76*/
+}
+.team-projet a:hover .captns i{
+    margin-top: 80px;
+    font-size: 30px;
+    color: #fff;
+}
+/*****/
+.team-ventes a{
+text-decoration: none;
+border-bottom: 2px solid transparent;
+}
+.team-ventes a:hover{
+    border-bottom: 2px solid #1a6aeb;
+}
+.team-ventes a .captn {
+    right: 0;
+    top: -100%;
+    width: 100%;
+}
+.team-ventes a:hover .captn {
+    padding: 42% 10%;
+    top: -44%;
+    width: 100%;
+}
+.team-ventes a:hover .captn i{
+    margin-top: 80px;
+    font-size: 30px;
+    color: #fff;
+}
+/******* end  section ventes ******/
+/******* start  section finance ******/
+#finance .padtopfina{
+margin-top: 50px;
+}
+.curentimgnew{
+    position: relative;
+}
+#finance .curentimgnew .triangle{
+    background: rgba(0, 0, 0, 0) url("images/triangle.png") no-repeat scroll left center;
+    height: 112px;
+    position: absolute;
+    top: 0;
+    width: 112px;
+}
+#finance p{
+	font-family: "adelle_sanslight";
+	font-size: 16px;
+	text-align: justify;
+    line-height: 170%;
+	}
+/*.wp-image-153,#bank{display:inline-block;}
+/******* end  section finance ******/
+/******* start  section finances ******/
+#finances .padtopfina{
+/*margin-top: 50px;*/
+}
+.curentimgnew{
+    position: relative;
+}
+#finances .curentimgnew .triangle{
+    background: rgba(0, 0, 0, 0) url("images/triangle.png") no-repeat scroll left center;
+    height: 112px;
+    position: absolute;
+    top: 0;
+    width: 112px;
+}
+#finances p{
+	font-family: "adelle_sanslight";
+	font-size: 16px;
+	text-align: justify;
+    line-height: 170%;
+	}
+section#finances{background: none;
+    width: 100%;}
+/*.wp-image-153,#bank{display:inline-block;}
+/******* end  section finances ******/
+/******* start  section contact ******/
+section#contact{margin-bottom: 0px;}
+#contact iframe{ width: 100%;}
+#FSContact1 form#fscf_form1 div#fscf_required1{display: none;}
+#contact .infocontact{margin-top: 50px;}
+#contact ul{margin-bottom: 20px;margin-top: 20px;}
+#contact ul li i{
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    height: 30px;
+    padding-top: 8px;
+    text-align: center;
+    width: 30px;
+}
+#contact ul li i.fa-facebook{background-color: #4d6baa;}
+#contact ul li i.fa-twitter{background-color: #4fc6f8;}
+#contact ul li i.fa-google{background-color: #ea6060;}
+#contact ul li i.fa-linkedin{background-color: #238cc8;}
+#contact ul li i.fa-youtube-play{background-color: red} 
+#contact  i.adr{
+    color: #1e6fec;
+    padding-right: 10px;
+	padding-left: 15px;
+
+}
+#contact .phone{
+    margin-top: 10px;
+}
+#contact .mail{
+    margin-bottom: 90px;
+}
+#contact #FSContact1 form #fscf_captcha_image_div1{float: left;}
+.copyright{
+    background-color: #7f7f7f;
+    margin-bottom: 0px;
+    position: absolute;
+    width: 100%;
+    /*bottom: 0px;*/
+}
+ .copyright ul li{
+border-left: 1px solid #fff;
+color: #fff;
+}
+ .copyright ul li a{color: #fff;cursor: pointer;}
+ .copyright ul li:first-child{border-left: none;}
+
+/******* end  section contact ******/
+/* debut sidebar*/
+ #sidebar aside#calendar-2 #calendar_wrap table#wp-calendar{margin: 0 auto;width: 60%;}
+ #sidebar aside#calendar-2 #calendar_wrap table#wp-calendar tfoot{display: none;}
+ #sidebar aside#calendar-2 #calendar_wrap table#wp-calendar tbody tr td#today{color: blue;}
+
+/*end sidebar*/
+/* Start page projet */
+.block1,.block2{
+	display:inline-block;
+	}
+.block3,.block4{
+	display:inline-block;
+	}
+.block1, .block3{
+	    padding-left: 200px;
+	}
+h1.page-title{
+	color: #1a6aeb;
+    text-align: center;
+	margin-bottom:80px;
+}
+h4.title_project ,h4.title_contenu{
+	text-align: center;
+    font-size: 20px;
+	padding-top: 20px;
+}
+h4.title_contenu:hover{
+	/*color:#1a6aeb;*/
+}
+p#desc{
+	text-align: justify;
+    line-height: 170%
+}
+.block-res-description ul{
+	display: block;
+    font-size: 0;
+    padding: 0 0 18px 0;
+}
+.block-res-description li{
+	z-index: 1;
+    position: relative;
+    font-size: 16px;
+    padding: 0 0 0 9px;
+    line-height: 120%;
+}
+.block-res-description {
+	padding-top: 80px;
+}
+/* end page projet */
+/* Start Scrollup */
+#scroll-top {
+    background-color: #7f7f7f;/*272727*/
+    bottom: 60px;
+    cursor: pointer;
+    display: none;
+    height: 50px;
+    position: fixed;
+    right: 15px;
+    text-align: center;
+    width: 50px;
+    z-index: 9999;
+}
+#scroll-top:hover {background-color:#7f7f7f;color: #fff;}/*444*/
+/* End Scrollup */
+/* Start Section Loading */
+
+section#projets,section#finance{background: #fff;
+    width: 100%;}
+.col-lg-8{padding-bottom: 80px;}
+.cols{margin-left: 64px;}
+/* End Section Loading */
+@media only screen and (max-width : 1200px) {
+        #myslide {max-height: 583px;}
+        .boxrelative  img{margin-top: -22px;}
+        .boxrelative .textslider {left: 7%;}
+    }
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+    }
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+    }
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+    }
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+    }
+    .singpro{margin-top: 150px;}
+    /*table projet*/
+    .plans table thead {background: #f3f3f3; border-top: 1px solid #e1e1e1; border-bottom: 1px solid #e1e1e1; color: #919191; }
+    .plans table tr td, .plans table th{text-align: center;font-family: 'adelle_sanssemibold';}
+    .plans table span.dispo{
+       color: #fff;
+    background: green;
+    text-transform: none;
+    padding: 7px;
+    display: block;
+    font-family: 'adelle_sanssemibold';
+    }
+    .plans table button.detaille{
+         color: #fff;
+    background: #919191;
+    /*padding: 5px;*/
+    text-transform: none;
+font-family: 'adelle_sanssemibold';
+    }
+.Réservé{
+    color: #fff;
+    background: orange;
+        margin-top: 8px;
+       /* padding: 5px;*/
+
+}
+.Disponible{
+    color: #fff;
+    background: green;
+        margin-top: 8px;
+        /*padding: 5px;*/
+}
+.Vendu{
+    color: #fff;
+    background: red;
+        margin-top: 8px;
+       /* padding: 5px;*/
+}
+.table{
+    margin: 0 auto;
+    max-width: 70%;
+}
+.table tbody tr td{
+    padding: 0px !important; 
+    vertical-align: inherit!important;
+}
+span.wpcf7-form-control-wrap input,span.wpcf7-form-control-wrap textarea{
+        background-color: #f6f6f6;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    color: #555;
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 1.42857;
+    padding: 8px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+span.wpcf7-form-control-wrap textarea{
+    height: 150px;
+}
+p input[type=submit] {
+        padding: 20px 50px;
+    background-color: #1e6fec;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'adelle_sanssemibold';
+    font-size: 18px;
+    border-radius: 0;
+}
+section #huge_it_gallery {
+         background-color: transparent !important; 
+     box-shadow: 0 0 0px !important; 
+     margin-top: 150px !important;
+}
+.huge_it_slideshow_image_wrap_gallery_2 {
+    margin-top: 170px !important;
+}
+body.postid-120 .main_box{
+display: none;
+}
+.div.clear{clear: both;}
+.centermenu{margin-right: 200px !important;}
+.gif{float: right;}
+.hr{border-top: 3px solid #ababab;margin-top: 7px;}
+a.amap{
+        text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+    background: #044;
+    color: #fff;
+}
