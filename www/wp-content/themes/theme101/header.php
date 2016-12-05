@@ -51,7 +51,7 @@
 			                    <audio id="myAudio" >
 			                         <source src="<?php echo get_template_directory_uri(); ?>/audio/yanni.mp3"  type="audio/mp3">
 			                    </audio>
-			                    <button type="button" onclick="aud_play_pause()"><i class="fa fa-volume-up"></i></button>
+			                    <button type="button" onclick="aud_play_pause()"><i class="fa fa-volume-up"></i></button>  
 			                </li>
 			              </ul>
 

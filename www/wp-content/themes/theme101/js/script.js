@@ -26,14 +26,42 @@ $(window).load(function () {
 //     });
 // });
 
-function aud_play_pause() {
+function aud_play_pause() { 
   var myAudio = document.getElementById("myAudio");
+  //alert('jooooo');
+   myAudio.play();
+  /*
   if (myAudio.paused) {
     myAudio.play();
   } else {
     myAudio.pause();
-  }
+  }*/
 }
+
+
+/*var waitTime = 150;
+
+setTimeout(function () {      
+  // Resume play if the element if is paused.
+  if (el.paused) {
+    el.play();
+  }
+}, waitTime);*/
+
+/*
+function pausePlay() { 
+    console.log('Will now try to pause video and play it again in same eventloop');
+    a.pause();
+    a.play();
+  }
+
+  window.onload = function() {
+    a.play();
+
+    setInterval(pausePlay, 1000);
+  };
+*/
+
 $(document).ready(function(){
     $(".open").click(function(){
         $(".field").slideToggle();
