@@ -19,10 +19,6 @@
 	?>
 	
 	<body <?php body_class( $awesome_classes ); ?>>
-		
-		
-					
-					
 					<!-- Start Our Navbar -->
 			        <nav class="navbar  navbar-fixed-top" role="navigation">
 			          <div class="container">

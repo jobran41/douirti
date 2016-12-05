@@ -41,11 +41,11 @@
 	</div>
   
 
-  <div class="modal fade tabimg" id="myModal" role="dialog" > 
+  <div class="modal fade tabimg " id="myModal" role="dialog" > 
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
 
-	        <img id="img-arch" class="img-responsive center-block" src="" alt="" style="" />
+	        <img id="img-arch" class="img-responsive center-block zoomin" src="" alt="" style="" />
 
       </div>
     </div>

@@ -36,15 +36,30 @@ audiojs.events.ready(function() {
 
 
 $(document).ready(function(){
-    
-    $("#myModal.tabimg img").mousedown(function(){
-        var stylesmousedown = {
-        width : "1200px",
-        height: "700"
-      };
-        $(this).css(stylesmousedown);
-    });
-    
+   
+     $('#myModal').on('shown.bs.modal', function () {
+         var zoom = false;  
+         $(this).find('img').click(function(){  
+             if(!zoom){
+                  var stylesmousedown = {
+                width : "1400px",
+                height: "800px",
+                cursor: "zoom-out"
+              };
+                $(this).css(stylesmousedown);
+                zoom = true;
+             }else{
+            var stylesmousedownout = {
+            width : "auto",
+            height: "auto",
+            cursor: "zoom-in" 
+          };
+                $(this).css(stylesmousedownout);
+                zoom = false;
+             }
+
+        });
+      })
     $(".open").click(function(){
         $(".field").slideToggle();
     });

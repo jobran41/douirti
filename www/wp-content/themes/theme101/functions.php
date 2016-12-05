@@ -184,6 +184,7 @@ function awesome_custom_taxonomies() {
 
 add_action( 'init' , 'awesome_custom_taxonomies' );
 
+
 /*
 	==========================================
 	Custom Term Function
