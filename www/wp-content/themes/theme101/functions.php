@@ -18,7 +18,7 @@ function awesome_script_enqueue() {
 	wp_enqueue_script('bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '3.3.4', true);
 	wp_enqueue_script('nicescroll', get_template_directory_uri() . '/js/jquery.nicescroll.min.js', array(), '1.1.0', true);
 	wp_enqueue_script('smooth-scroll', get_template_directory_uri() . '/js/smooth-scroll.min.js', array(), '1.2.0', true);
-	// wp_enqueue_script('wow', get_template_directory_uri() . '/js/wow.js', array(), '1.3.0', true);
+	wp_enqueue_script('wow', get_template_directory_uri() . '/js/audio.min.js', array(), '1.3.0', true); 
 	wp_enqueue_script('monscript', get_template_directory_uri() . '/js/script.js', array(), '1.3.2',true);
 }
 add_action( 'wp_enqueue_scripts', 'awesome_script_enqueue');

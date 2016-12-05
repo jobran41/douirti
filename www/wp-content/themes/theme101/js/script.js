@@ -26,43 +26,25 @@ $(window).load(function () {
 //     });
 // });
 
-function aud_play_pause() { 
-  var myAudio = document.getElementById("myAudio");
-  //alert('jooooo');
-   myAudio.play();
-  /*
-  if (myAudio.paused) {
-    myAudio.play();
-  } else {
-    myAudio.pause();
-  }*/
-}
 
 
-/*var waitTime = 150;
 
-setTimeout(function () {      
-  // Resume play if the element if is paused.
-  if (el.paused) {
-    el.play();
-  }
-}, waitTime);*/
+audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
 
-/*
-function pausePlay() { 
-    console.log('Will now try to pause video and play it again in same eventloop');
-    a.pause();
-    a.play();
-  }
 
-  window.onload = function() {
-    a.play();
-
-    setInterval(pausePlay, 1000);
-  };
-*/
 
 $(document).ready(function(){
+    
+    $("#myModal.tabimg img").mousedown(function(){
+        var stylesmousedown = {
+        width : "1200px",
+        height: "700"
+      };
+        $(this).css(stylesmousedown);
+    });
+    
     $(".open").click(function(){
         $(".field").slideToggle();
     });

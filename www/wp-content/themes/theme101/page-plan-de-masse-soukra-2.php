@@ -4,7 +4,7 @@
 
 <div class="singpro">
 
-   <a href="" data-toggle="modal" data-target="#myModal88"><img id="img-arch" src="<?php bloginfo("stylesheet_directory");?>/images/small2soukra.png" class="img-responsive center-block"  alt="" style="max-width: 70%;" /></a>
+   <a href="" data-toggle="modal" data-target="#myModal88"><img id="img-arch" src="<?php bloginfo("stylesheet_directory");?>/images/small2soukra.png" class="img-responsive center-block"  alt="" style="" /></a>
 	<div class="modal fade" id="myModal88" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">

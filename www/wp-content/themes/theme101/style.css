@@ -651,3 +651,20 @@ a.amap{
     background: #044;
     color: #fff;
 }
+.audiojs {
+    width: 35px;
+        margin-top: 18px;
+}
+.audiojs .scrubber {display: none;}
+.audiojs .time {display: none;}
+.audiojs .play-pause{border: none;}
+.singpro .modal-dialog.modal-lg{
+        transform: rotate(-90deg);
+    margin-top: -100px;
+}
+#myModal.tabimg img{
+    max-width: 100%;
+}
+#myModal.tabimg img:hover{
+    cursor: zoom-in;
+}

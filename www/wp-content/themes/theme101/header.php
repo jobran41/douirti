@@ -47,12 +47,9 @@
 			                <li>
 			                	<a  id="searchform" class="open"><i class="fa fa-search"></i></a>
 			                </li>
-			                <li>
-			                    <audio id="myAudio" >
-			                         <source src="<?php echo get_template_directory_uri(); ?>/audio/yanni.mp3"  type="audio/mp3">
-			                    </audio>
-			                    <button type="button" onclick="aud_play_pause()"><i class="fa fa-volume-up"></i></button>  
-			                </li>
+			                <li> 
+                                           <audio autoplay="autoplay" src="<?php echo get_template_directory_uri(); ?>/audio/yanni.mp3"  />  
+                                         </li>  
 			              </ul>
 
 			              <?php if( is_front_page() ){
