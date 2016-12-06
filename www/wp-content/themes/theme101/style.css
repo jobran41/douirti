@@ -668,3 +668,11 @@ a.amap{
 #myModal.tabimg img:hover{
     cursor: zoom-in;
 }
+.retourbnt{
+    height: 66px;
+    width: 166px;  
+    background: url("images/buttons.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: block;
+}

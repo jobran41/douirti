@@ -39,6 +39,7 @@
 	    </tbody>
 	  </table>
 	</div>
+    <a class="retourbnt" href="javascript:history.back()"></a>
   
 
   <div class="modal fade tabimg " id="myModal" role="dialog" > 
